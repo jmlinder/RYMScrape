@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[84]:
-
-
 import requests
 from bs4 import BeautifulSoup
 
@@ -27,10 +24,4 @@ for release in table.select("td > a.artist"):
     print("Album:", release.findNextSibling("a", class_="album").text)
     print("Release date:",release.findNextSibling("span", class_="smallgray").text.strip("()").replace("  ", " "))
     print("\n")
-
-
-# In[ ]:
-
-
-
 
